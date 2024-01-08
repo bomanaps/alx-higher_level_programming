@@ -2,6 +2,6 @@
 function add (a, b) {
   return a + b;
 }
-
-console.log(add(Number(process.argv[2]), Number(process.argv[3])));
-
+const val1 = parseInt(process.argv[2]);
+const val2 = parseInt(process.argv[3]);
+console.log(add(val1, val2));

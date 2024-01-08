@@ -1,11 +1,14 @@
-t size = Math.floor(Number(process.argv[2]));
-if (isNaN(size)) {
-  console.log('Missing size');
-} else {
-  for (let r = 0; r < size; r++) {
-    let row = '';
-    for (let c = 0; c < size; c++) row += 'X';
-    console.log(row);
+#!/usr/bin/node
+let square = '';
+let iteration;
+if (parseInt(process.argv[2])) {
+  iteration = process.argv[2];
+  for (let i = 0; i < iteration; i++) {
+    square += 'X';
   }
+  for (let i = 0; i < iteration; i++) {
+    console.log(square);
+  }
+} else {
+  console.log('Missing size');
 }
-
